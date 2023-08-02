@@ -7,7 +7,7 @@ The objective of this challenge is to showcase the skills of candidates as a fro
 Clone your project locally, then install the packages and you're good to go!
 
 ```bash
-yarn installs
+yarn install
 
 # run client and server apps
 yarn start
@@ -18,4 +18,4 @@ yarn test
 
 ## Link demo
 
-[Demo](https://linktodocumentation)
+[Demo](https://todoapp-two-opal.vercel.app/)
