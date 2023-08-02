@@ -1,6 +1,6 @@
 # Coding assignments
 
-The objective of this challenge is to showcase the skills of candidates as a front-end developer by building a To-Do list web application using React and TypeScript. The application should allow users to add, edit, and mark tasks as completed, as well as persist the data in the browser.
+Building a To-Do list web application using React and TypeScript. The application should allow users to add, edit, and mark tasks as completed, as well as persist the data in the browser.
 
 ## To-do list web application
 
