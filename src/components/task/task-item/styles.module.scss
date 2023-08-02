@@ -1,0 +1,84 @@
+.task {
+  padding: 15px 10px;
+  
+  &:hover {
+    background-color: var(--bg-color);
+  }
+
+  .form {
+    display: flex;
+    align-items: center;
+
+    :global {
+      input {
+        width: 100%;
+        font-size: 16px;
+        border: 0;
+        color: var(--primary-color);
+        background: transparent;
+      }
+
+      .button {
+        --shadow: rgba(10, 22, 50, .24);
+        margin-left: 10px;
+        cursor: pointer;
+        bottom: 10px;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        border: 0;
+        border-radius: 8px;
+        background: var(--secondary-color);
+        color: #fff;
+        box-shadow: 0 2px 8px -1px var(--shadow);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        padding: 5px 10px;
+
+        &:hover {
+          background: var(--primary-color);
+        }
+      }
+    }
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    justify-content: space-between;
+
+    :global(.button) {
+      border: none;
+      background: none;
+      cursor: pointer;
+      color: var(--text-color);
+    }
+  
+    .radio-button {
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+  
+    .title {
+      width: calc(100% - 60px);
+      overflow-wrap: break-word;
+      color: var(--text-color);
+    }
+  
+    .checked {
+      color: var(--text-secondary-color);
+      text-decoration: line-through;
+    }
+  
+    .edit-button {
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+  
+    .check-button {
+      color: var(--secondary-color);
+    }
+  }
+}

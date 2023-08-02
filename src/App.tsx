@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from './styles/app.module.scss';
+import TaskInput from './components/task/task-input';
+import TaskList from './components/task/task-list';
+import TaskClearButton from './components/task/task-clear-button';
+import Header from './components/common/header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles['container']}>
+      <Header />
+
+      <div className={styles.section}>
+        <div className={styles.task}>
+          <TaskInput />
+          <TaskList />
+        </div>
+      </div>
+
+      <div className={styles.footer}>
+        <TaskClearButton />
+      </div>
+      <div className={styles.background}></div>
     </div>
   );
 }

@@ -1,0 +1,23 @@
+.header {
+  width: 100%;
+  display: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background: var(--primary-color);
+  height: 3em;
+
+  .title {
+    font-weight: 600;
+    
+    text-align: center;
+    line-height: 2em;
+    font-size: 1.2em;
+
+    a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+    }
+  }
+}

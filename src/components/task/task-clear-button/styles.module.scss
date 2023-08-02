@@ -1,0 +1,22 @@
+.clear-button {
+  --shadow: rgba(10, 22, 50, .24);
+  cursor: pointer;
+  text-transform: capitalize;
+  border: none;
+  padding: 10px;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px -1px var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  :global(.icon) {
+    margin-left: 10px;
+    font-size: 10px;
+  }
+
+  &:hover {
+    background: var(--secondary-color);
+  }
+}

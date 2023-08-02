@@ -1,0 +1,61 @@
+.container {
+  height: 100%;
+  width: 100%;
+
+  .section {
+    animation: fadeIn 0.5s ease-in;
+    background-color: white;
+    left: 50%;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 10;
+    box-shadow: 0 0 30px rgba(211, 220, 248, .3);
+    border-radius: 9px;
+    border: 1px solid #e7ecfb;
+
+    .task {
+      max-height: 460px;
+      overflow: auto;
+      width: 460px;
+
+      &::-webkit-scrollbar {
+        background-color: white;
+        width: 4px; 
+      }
+
+      &::-webkit-scrollbar-thumb {
+        --scrolbar-color: #c8c8c8;
+        background-color: var(--scrolbar-color);
+      }
+    }
+
+    
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
+  .footer {
+    bottom: 0px;
+    left: 50%;
+    margin: 20px 0;
+    position: fixed;
+    z-index: 1;
+    transform: translateX(-50%);
+  }
+
+  .background {
+    background-color: var(--bg-color);
+    height: 100vh;
+    position: fixed;
+    width: 150%;
+  }
+}
