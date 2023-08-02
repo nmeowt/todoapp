@@ -48,7 +48,7 @@ function TaskInput() {
       />
       <Button
         className={styles['add-button']}
-        disabled={formData === undefined ? true : false}
+        disabled={title === undefined || title === '' ? true : false}
         startIcon="icon-plus"
       />
     </form>

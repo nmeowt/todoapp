@@ -15,13 +15,17 @@
 
     &:focus {
       + .add-button {
-        color: var(--primary-color);
+        &:enabled {
+          color: var(--primary-color);
+        }
       }
     }
 
     &:hover {
       + .add-button {
-        color: var(--primary-color);
+        &:enabled {
+          color: var(--primary-color);
+        }
       }
     }
   }
@@ -39,8 +43,9 @@
     font-size: 18px;
     padding: 12px;
 
-    &:hover {
-      color: var(--primary-color);
+    &:disabled {
+      color: var(--text-secondary-color);
+      cursor: not-allowed;
     }
   }
 }
