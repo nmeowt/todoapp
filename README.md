@@ -18,4 +18,4 @@ yarn test
 
 ## Link demo
 
-[Demo](https://todoapp-two-opal.vercel.app/)
+<a href="https://todoapp-two-opal.vercel.app" target="_blank">Demo</a>
