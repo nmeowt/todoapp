@@ -56,10 +56,30 @@
       color: var(--text-color);
     }
 
-    .title {
-      width: calc(100% - 60px);
-      overflow-wrap: break-word;
-      color: var(--text-color);
+    .info {
+      display: flex;
+
+      .radio-button {
+        margin-right: 10px;
+
+        &:hover {
+          color: var(--secondary-color);
+        }
+      }
+
+      .check-button {
+        color: var(--secondary-color);
+        margin-right: 10px;
+
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+
+      .title {
+        overflow-wrap: break-word;
+        color: var(--text-color);
+      }
     }
 
     .checked {
@@ -71,21 +91,12 @@
       display: flex;
       align-items: center;
 
-      .radio-button {
+      .edit-button,
+      .remove-button {
         &:hover {
           color: var(--secondary-color);
         }
       }
-
-      .edit-button {
-        &:hover {
-          color: var(--secondary-color);
-        }
-      }
-    }
-
-    .check-button {
-      color: var(--secondary-color);
     }
   }
 }

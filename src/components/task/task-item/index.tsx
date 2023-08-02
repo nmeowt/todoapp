@@ -49,6 +49,23 @@ function TaskItem({ task }: IProps) {
     setTasks(completedTasks);
   };
 
+  const handleUncompleteTask = () => {
+    const unCompletedTasks =
+      tasks &&
+      tasks.map((_task: ITask) => {
+        if (_task.id === task.id) {
+          return { ..._task, status: false };
+        }
+        return _task;
+      });
+    setTasks(unCompletedTasks);
+  };
+
+  const handleDeleteTask = () => {
+    const undeletedTasks = tasks && tasks.filter((_task: ITask) => _task.id !== task.id);
+    setTasks(undeletedTasks);
+  };
+
   return (
     <div className={styles.task}>
       {isEditing ? (
@@ -58,25 +75,38 @@ function TaskItem({ task }: IProps) {
         </form>
       ) : (
         <div className={styles.item}>
-          <div className={classnames(styles.title, { [styles.checked]: checkStatus })}>
-            {task.title}
-          </div>
-          {!checkStatus ? (
-            <div className={styles.action}>
-              <Button
-                onClick={toggleForm}
-                className={styles['edit-button']}
-                startIcon="icon-pencil"
-              />
+          <div className={styles.info}>
+            {!checkStatus ? (
               <Button
                 onClick={handleCompleteTask}
                 className={styles['radio-button']}
                 startIcon="icon-radio-unchecked"
               />
+            ) : (
+              <Button
+                onClick={handleUncompleteTask}
+                startIcon="icon-checkmark"
+                className={styles['check-button']}
+              />
+            )}
+            <div className={classnames(styles.title, { [styles.checked]: checkStatus })}>
+              {task.title}
             </div>
-          ) : (
-            <Button startIcon="icon-checkmark" className={styles['check-button']} />
-          )}
+          </div>
+          <div className={styles.action}>
+            {!checkStatus && (
+              <Button
+                onClick={toggleForm}
+                className={styles['edit-button']}
+                startIcon="icon-pencil"
+              />
+            )}
+            <Button
+              onClick={handleDeleteTask}
+              startIcon="icon-cross"
+              className={styles['remove-button']}
+            />
+          </div>
         </div>
       )}
     </div>
