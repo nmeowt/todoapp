@@ -1,3 +1,5 @@
+@import 'variables';
+
 .container {
   height: 100%;
   width: 100%;
@@ -29,9 +31,30 @@
         --scrolbar-color: #c8c8c8;
         background-color: var(--scrolbar-color);
       }
-    }
 
-    
+      @media (min-width: $laptop-l-width) {
+        width: 700px;
+        max-height: 670px;
+      }
+      
+      @media(max-height: $mobile-height) {
+        width: 400px;
+        max-height: 390px;
+      }
+      
+      @media(max-width: $tablet-width) {
+        width: 400px;
+        max-height: 390px;
+      }
+      
+      @media(max-width: $mobile-l-width ) {
+        width: 280px;
+      }
+      
+      @media(max-width: $mobile-s-width) {
+        width: 230px;
+      }
+    }
 
     @keyframes fadeIn {
       from {
@@ -50,6 +73,13 @@
     position: fixed;
     z-index: 1;
     transform: translateX(-50%);
+
+    
+    @media(max-width: $mobile-m-width) {
+      :global(.button) {
+        font-size: 13px;
+      }
+    }
   }
 
   .background {
