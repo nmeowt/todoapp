@@ -13,7 +13,7 @@
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: 10;
-    box-shadow: 0 0 30px rgba(211, 220, 248, .3);
+    box-shadow: 0 0 30px rgba(211, 220, 248, 0.3);
     border-radius: 9px;
     border: 1px solid #e7ecfb;
 
@@ -24,7 +24,7 @@
 
       &::-webkit-scrollbar {
         background-color: white;
-        width: 4px; 
+        width: 4px;
       }
 
       &::-webkit-scrollbar-thumb {
@@ -36,22 +36,22 @@
         width: 700px;
         max-height: 670px;
       }
-      
-      @media(max-height: $mobile-height) {
+
+      @media (max-height: $mobile-height) {
         width: 400px;
         max-height: 390px;
       }
-      
-      @media(max-width: $tablet-width) {
+
+      @media (max-width: $tablet-width) {
         width: 400px;
         max-height: 390px;
       }
-      
-      @media(max-width: $mobile-l-width ) {
+
+      @media (max-width: $mobile-l-width) {
         width: 280px;
       }
-      
-      @media(max-width: $mobile-s-width) {
+
+      @media (max-width: $mobile-s-width) {
         width: 230px;
       }
     }
@@ -74,8 +74,7 @@
     z-index: 1;
     transform: translateX(-50%);
 
-    
-    @media(max-width: $mobile-m-width) {
+    @media (max-width: $mobile-m-width) {
       :global(.button) {
         font-size: 13px;
       }

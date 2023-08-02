@@ -3,7 +3,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  
+
   .input {
     width: 100%;
     font-size: 16px;
@@ -14,13 +14,13 @@
     background: var(--bg-color);
 
     &:focus {
-      + .add-button {   
+      + .add-button {
         color: var(--primary-color);
       }
     }
-    
+
     &:hover {
-      + .add-button {   
+      + .add-button {
         color: var(--primary-color);
       }
     }

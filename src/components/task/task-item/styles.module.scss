@@ -1,6 +1,6 @@
 .task {
   padding: 15px 10px;
-  
+
   &:hover {
     background-color: var(--bg-color);
   }
@@ -19,7 +19,7 @@
       }
 
       .button {
-        --shadow: rgba(10, 22, 50, .24);
+        --shadow: rgba(10, 22, 50, 0.24);
         margin-left: 10px;
         cursor: pointer;
         bottom: 10px;
@@ -31,7 +31,9 @@
         background: var(--secondary-color);
         color: #fff;
         box-shadow: 0 2px 8px -1px var(--shadow);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
         padding: 5px 10px;
 
         &:hover {
@@ -53,30 +55,35 @@
       cursor: pointer;
       color: var(--text-color);
     }
-  
-    .radio-button {
-      &:hover {
-        color: var(--secondary-color);
-      }
-    }
-  
+
     .title {
       width: calc(100% - 60px);
       overflow-wrap: break-word;
       color: var(--text-color);
     }
-  
+
     .checked {
       color: var(--text-secondary-color);
       text-decoration: line-through;
     }
-  
-    .edit-button {
-      &:hover {
-        color: var(--secondary-color);
+
+    .action {
+      display: flex;
+      align-items: center;
+
+      .radio-button {
+        &:hover {
+          color: var(--secondary-color);
+        }
+      }
+
+      .edit-button {
+        &:hover {
+          color: var(--secondary-color);
+        }
       }
     }
-  
+
     .check-button {
       color: var(--secondary-color);
     }

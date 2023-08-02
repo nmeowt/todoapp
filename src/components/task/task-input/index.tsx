@@ -5,9 +5,9 @@ import styles from './styles.module.scss';
 import Button from 'src/components/common/button';
 
 function TaskInput() {
-  const [tasks, setTasks] = useLocalStorage<ITask[]>("tasks", []);
+  const [tasks, setTasks] = useLocalStorage<ITask[]>('tasks', []);
   const [formData, setFormData] = useState<ITask | {}>();
-  const [title, setTitle] = useState<string>("");
+  const [title, setTitle] = useState<string>('');
 
   const handleCreateTask = (task: ITask) => {
     const length = tasks.length;
@@ -16,24 +16,24 @@ function TaskInput() {
     const newTask: ITask = {
       id: Number(maxId) + 1,
       title: task.title,
-      status: false,
+      status: false
     };
 
     setTasks([...tasks, newTask]);
-  }
+  };
 
   const handleForm = (e: React.FormEvent<HTMLInputElement>): void => {
-    setTitle(e.currentTarget.value)
+    setTitle(e.currentTarget.value);
     setFormData({
       ...formData,
-      [e.currentTarget.id]: e.currentTarget.value,
+      [e.currentTarget.id]: e.currentTarget.value
     });
   };
 
   const handleSaveTask = (e: React.FormEvent, formData: ITask | any) => {
     e.preventDefault();
     handleCreateTask(formData);
-    setTitle("");
+    setTitle('');
   };
 
   return (
@@ -41,7 +41,7 @@ function TaskInput() {
       <input
         className={styles.input}
         onChange={handleForm}
-        placeholder='Task'
+        placeholder="Task"
         type="text"
         id="title"
         value={title}
@@ -49,10 +49,10 @@ function TaskInput() {
       <Button
         className={styles['add-button']}
         disabled={formData === undefined ? true : false}
-        startIcon='icon-plus'
+        startIcon="icon-plus"
       />
     </form>
-  )
+  );
 }
 
 export default memo(TaskInput);

@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, forwardRef, memo } from "react";
+import { ButtonHTMLAttributes, forwardRef, memo } from 'react';
 import classnames from 'classnames';
 import styles from './styles.module.scss';
 
@@ -9,33 +9,16 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    {
-      children,
-      className,
-      startIcon,
-      endIcon,
-      ...rest
-    },
-    ref
-  ) => {
+  ({ children, className, startIcon, endIcon, ...rest }, ref) => {
     return (
-      <button
-        ref={ref}
-        className={classnames(styles.button, 'button', className)}
-        {...rest}
-      >
-        {startIcon && (
-          <span className={classnames(styles.icon, 'icon', startIcon)}></span>
-        )}
+      <button ref={ref} className={classnames(styles.button, 'button', className)} {...rest}>
+        {startIcon && <span className={classnames(styles.icon, 'icon', startIcon)}></span>}
         {children}
-        {endIcon && (
-          <span className={classnames(styles.icon, 'icon', endIcon)}></span>
-
-        )}
+        {endIcon && <span className={classnames(styles.icon, 'icon', endIcon)}></span>}
       </button>
-    )
+    );
   }
 );
 
+Button.displayName = 'Button';
 export default memo(Button);

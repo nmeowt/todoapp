@@ -1,7 +1,8 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?hyzu7d');
-  src:  url('fonts/icomoon.eot?hyzu7d#iefix') format('embedded-opentype'),
+  src: url('fonts/icomoon.eot?hyzu7d');
+  src:
+    url('fonts/icomoon.eot?hyzu7d#iefix') format('embedded-opentype'),
     url('fonts/icomoon.ttf?hyzu7d') format('truetype'),
     url('fonts/icomoon.woff?hyzu7d') format('woff'),
     url('fonts/icomoon.svg?hyzu7d#icomoon') format('svg');
@@ -10,7 +11,8 @@
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^='icon-'],
+[class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;
@@ -26,17 +28,17 @@
 }
 
 .icon-pencil:before {
-  content: "\e905";
+  content: '\e905';
 }
 .icon-plus:before {
-  content: "\ea0a";
+  content: '\ea0a';
 }
 .icon-cross:before {
-  content: "\ea0f";
+  content: '\ea0f';
 }
 .icon-checkmark:before {
-  content: "\ea10";
+  content: '\ea10';
 }
 .icon-radio-unchecked:before {
-  content: "\ea56";
+  content: '\ea56';
 }
